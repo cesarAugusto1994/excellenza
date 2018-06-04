@@ -299,7 +299,7 @@
     <h2>Fale Conosco</h2>
     <h3>+55 (47) 3439-1259</h3>
     <p>Sed sed neque laoreet, rhoncus libero id, pharetra est. Sed ut neque est. Maecenas et est sagittis, mollis risus dignissim, mattis dolor. </p>
-    <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Contact Us Now</a> </div>
+    <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Nos Ligue agora</a> </div>
 </div>
 
 <!-- Blog Section -->
@@ -374,7 +374,7 @@
 
     <!-- SECTION TITLE -->
     <div class="section-title">
-      <h3>Nosso Endereço</h3>
+      <h3>Entre em Contato</h3>
       <p>Perguntas e Respostas</p>
     </div>
     <div class="row">
@@ -457,7 +457,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="footer-lwf">
-            <h3 class="footer-logo"><img src="images/logo.png" alt="LawFirm"></h3>
+            <h3 class="footer-logo">EXCELLENZA</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet, massa ac ornare feugiat, nunc dui auctor ipsum, sed posuere eros sapien id quam. </p>
             <ul class="footer-contact">
               <li><i class="fa fa-phone"></i> +1 1234 456789</li>
