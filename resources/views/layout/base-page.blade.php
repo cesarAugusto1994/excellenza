@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 @include('layout.includes.css')
 </head>
-<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+<body class="subpage" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
     <!-- PRE LOADER -->
     <div class="preloader">
@@ -30,6 +30,5 @@
     @include('layout.includes.js')
 
     @yield('js')
-
 </body>
 </html>

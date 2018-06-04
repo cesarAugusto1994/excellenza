@@ -16,9 +16,21 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/sobre-nos', function () {
-    return view('index');
+    return view('paginas/empresa');
 })->name('sobre_nos');
 
+Route::get('/equipe', function () {
+    return view('paginas/equipe');
+})->name('equipe');
+
 Route::get('/contato', function () {
-    return view('index');
+    return view('paginas/contato');
 })->name('contato');
+
+Route::get('/envio-documentos', function () {
+    return view('paginas/envio-documentos');
+})->name('envio_documentos');
+
+Route::get('/processos', function () {
+    return view('paginas/acompanhamento');
+})->name('processos');

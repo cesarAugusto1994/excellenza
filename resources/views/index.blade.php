@@ -2,64 +2,14 @@
 
 @section('content')
 
-<!-- PRE LOADER -->
-<div class="preloader">
-  <div class="cssload-dots">
-    <div class="cssload-dot"></div>
-    <div class="cssload-dot"></div>
-    <div class="cssload-dot"></div>
-    <div class="cssload-dot"></div>
-    <div class="cssload-dot"></div>
-  </div>
-</div>
-
-<!-- Navigation Section -->
-<div class="navbar custom-navbar wow fadeInDown" data-wow-duration="2s" role="navigation" id="header">
-  <div class="container">
-
-    <!-- NAVBAR HEADER -->
-    <div class="navbar-header">
-      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon icon-bar"></span> <span class="icon icon-bar"></span> <span class="icon icon-bar"></span> </button>
-      <!-- lOGO TEXT HERE -->
-      <!--<a href="index.html" class="navbar-brand"><img src="images/logo.png" class="whtlogo" alt="" /> <img src="images/logo-color.png" class="logocolor" alt=""></a> </div>-->
-
-        <a href="index.html" class="navbar-brand">EXCELLENZA</a>
-    </div>
-
-    <!-- NAVIGATION LINKS -->
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="{{ route('home') }}">Inicio </a>
-        </li>
-        <li><a href="{{ route('sobre_nos') }}">Conheça a Empresa</a></li>
-
-        <li><a href="{{ route('sobre_nos') }}">Equipe</a></li>
-
-        <li><a href="#" class="dropdown">Serviços <span class="caret"></span></a>
-          <!-- dropdown start -->
-          <ul class="dropdown-menu">
-            <li><a href="blog-list.html">Envio de Documentos</a></li>
-            <li><a href="blog-list2.html">Acompanhamento Processual</a></li>
-            <li><a href="blog-detail.html">Modelos e Instruções</a></li>
-            <li><a href="blog-detail.html">Perguntas e Respostas</a></li>
-          </ul>
-        </li>
-
-        <li><a href="services.html">Blog</a></li>
-
-        <li><a href="{{ route('contato') }}">Contato</a></li>
-        <li><span class="calltxt"><i class="fa fa-phone" aria-hidden="true"></i> +55 (47) 3439-1259</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
+@include('layout.includes.menu')
 
 <!-- Home Section -->
 <div id="home2" class="parallax-section">
   <!--     <div class="overlay"></div>-->
   <div class="container">
     <div class="slide-text">
-      <h3>O que podemos fazer? <a href="" class="typewrite" data-period="2000" data-type='[ "Consultoria Empresarial", "Acessoria Juridica" ]'> <span class="wrap"></span> </a> </h3>
+      <h3>O que podemos fazer por você? <a href="" class="typewrite" data-period="2000" data-type='[ "Consultoria Empresarial", "Acessoria Juridica" ]'> <span class="wrap"></span> </a> </h3>
       <h1>EXCELLENZA</h1>
       <p>Consultoria Empresarial</p>
       <a href="#about" class="btn btn-default section-btn">Saiba mais</a> </div>
@@ -307,7 +257,7 @@
   <div class="container">
     <!-- SECTION TITLE -->
     <div class="section-title" >
-      <h3>Latest From <span>Blog</span></h3>
+      <h3>Noticias do <span>Blog</span></h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
     <ul class="blogGrid">
@@ -449,79 +399,11 @@
 </div>
 <!-- Clients Logo end-->
 
-<!-- Footer Section -->
-<div class="site-footer">
-  <!-- Footer Top start -->
-  <div class="footer-top-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="footer-lwf">
-            <h3 class="footer-logo">EXCELLENZA</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet, massa ac ornare feugiat, nunc dui auctor ipsum, sed posuere eros sapien id quam. </p>
-            <ul class="footer-contact">
-              <li><i class="fa fa-phone"></i> +1 1234 456789</li>
-              <li><i class="fa fa-envelope"></i> info@companyname.com</li>
-              <li><i class="fa fa-fax"></i> +1 123 123456</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="footer-lwf footer-menu">
-            <h3 class="footer-lwf-title">Quick Links</h3>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Company</a></li>
-              <li><a href="services.html">Our Services</a></li>
-              <li><a href="blog-list.html">Blog</a></li>
-              <li><a href="contact-us.html">Contact Us</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="footer-lwf footer-menu">
-            <h3 class="footer-lwf-title">About Lawyer</h3>
-            <ul>
-              <li><a href="practice-areas.html">Practice Areas List</a></li>
-              <li><a href="practice-area-detail.html">Practice Areas Detail</a></li>
-              <li><a href="attorney-list.html">Attorney List</a></li>
-              <li><a href="attorney.html">Attorney Detail</a></li>
-              <li><a href="faq.html">FAQs</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="footer-lwf">
-            <h3 class="footer-lwf-title">Opening Hours</h3>
-            <ul class="open-hours">
-              <li><span>Segunda à sexta-feira:</span> <span class="text-right"> das 8h às 18h.</span></li>
-              <li><span>Sabado e Domingo:</span> <span class="text-right">Fechado</span></li>
-            </ul>
-            <div class="newsletter">
-              <form>
-                <input type="text" placeholder="Informe o seu email" value="" class="news-input">
-                <button type="submit" value="" class="news-btn"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- footer top end -->
-
-  <!-- copyright start -->
-  <div class="footer-bottom-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-md-6">Copyright &copy; 2017 <span>LawFirm</span>. All Rights Reserved</div>
-        <div class="col-md-12 col-md-6 text-right">Design &amp; Development By: <a href="http://sharjeelanjum.com/" target="_blank">Sharjeel Anjum</a></div>
-      </div>
-    </div>
-  </div>
-  <!-- copyright end -->
 </div>
 
+@stop
+
+@section('js')
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMqMG_n4C0aAi3F8a82Q6s3hxDLrTXxe8&callback=initMap" async defer></script>
+    <script src="js/gmap.js"></script>
 @stop
