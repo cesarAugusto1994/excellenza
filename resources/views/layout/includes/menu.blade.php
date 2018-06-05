@@ -24,12 +24,10 @@
           <ul class="dropdown-menu">
             <li><a href="{{ route('envio_documentos') }}">Envio de Documentos</a></li>
             <li><a href="{{ route('processos') }}">Acompanhamento Processual</a></li>
-            <li><a href="#">Modelos e Instruções</a></li>
-            <li><a href="#">Perguntas e Respostas</a></li>
+            <li><a href="{{ route('blog') }}">Modelos e Instruções</a></li>
+            <li><a href="{{ route('faqs') }}">Perguntas e Respostas</a></li>
           </ul>
         </li>
-
-        <li><a href="#">Blog</a></li>
 
         <li><a href="{{ route('contato') }}">Contato</a></li>
         <li><span class="calltxt"><i class="fa fa-phone" aria-hidden="true"></i> +55 (47) 3439-1259</span></li>

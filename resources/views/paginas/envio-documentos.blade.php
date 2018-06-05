@@ -34,7 +34,7 @@
           Após o envio, a Excellenza fará a conferência dos documentos e será enviado um e-mail de confirmação com o número de protocolo, no prazo de até 48 (quarenta e oito) horas.
           Caso reste alguma dúvida, o Credor poderá acessar as instruções que se encontram no campo direito desta página.</p>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-8">
 
           <div class="contact-form">
           <form id="contact-form" class="row">
@@ -66,13 +66,60 @@
               <input type="file" class="form-control" name="phone" placeholder="Arquivo">
             </div>
             <div class="col-md-12 col-sm-12">
-              <textarea class="form-control" rows="5" name="message" placeholder="Message"></textarea>
+              <textarea class="form-control" rows="5" name="message" placeholder="Mensagem"></textarea>
             </div>
             <div class="col-md-12">
               <button id="submit" type="submit" class="form-control" name="submit">Enviar Arquivo</button>
             </div>
           </form>
         </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+          <ul class="howlist">
+            <!--step 1-->
+            <li>
+              <div class="howbox">
+                <div class="iconcircle"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
+                <h4>Habilitação de Crédito</h4>
+                <p>Visa a inclusão de credor</p>
+                <br/>
+                <div class="text-center">
+                  <a href="http://www.excellenza.com.br/area/img/downloads/sem-foto.gif">VEJA AS INSTRUÇÕES AQUI</a>
+                </div>
+              </div>
+            </li>
+            <!--step 1 end-->
+
+            <!--step 2-->
+            <li>
+              <div class="howbox">
+                <div class="iconcircle"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
+                <h4>Divergência de Crédito</h4>
+                <p>Visa a alteração de valor, classificação ou titularidade de crédito</p>
+                <div class="text-center">
+                    <a href="http://www.excellenza.com.br/area/img/downloads/sem-foto.gif">VEJA AS INSTRUÇÕES AQUI</a>
+                </div>
+              </div>
+            </li>
+            <!--step 2 end-->
+
+            <!--step 2-->
+            <li>
+              <div class="howbox">
+                <div class="iconcircle"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
+                <h4>Habilitação em Assembleia de Credores</h4>
+                <p>...</p>
+                <div class="text-center">
+                <a href="http://www.excellenza.com.br/area/img/downloads/sem-foto.gif">VEJA AS INSTRUÇÕES AQUI</a>
+                </div>
+              </div>
+            </li>
+            <!--step 2 end-->
+
+          </ul>
 
         </div>
       </div>
