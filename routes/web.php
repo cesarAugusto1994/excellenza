@@ -14,7 +14,7 @@
 Route::middleware('config')->group(function() {
     Route::get('/', function () {
 
-        $value = session('paginas');
+        $value = session('config');
 
         #dd($value);
 

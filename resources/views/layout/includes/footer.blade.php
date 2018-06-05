@@ -22,7 +22,7 @@
               <li><a href="{{ route('sobre_nos') }}">Conheça a Empresa</a></li>
               <li><a href="{{ route('equipe') }}">Equipe</a></li>
               <li><a href="#">Blog</a></li>
-              <li><a href="{{ route('contato') }}">Contact Us</a></li>
+              <li><a href="{{ route('contato') }}">Contato</a></li>
             </ul>
           </div>
         </div>
@@ -30,12 +30,14 @@
           <div class="footer-lwf footer-menu">
             <h3 class="footer-lwf-title">Posts Recentes</h3>
             <ul>
+              <!--
               <li><a href="#">Practice Areas List</a></li>
               <li><a href="#">Practice Areas Detail</a></li>
               <li><a href="#">Attorney List</a></li>
               <li><a href="#">Attorney Detail</a></li>
               <li><a href="#">FAQs</a></li>
               <li><a href="#">Testimonials</a></li>
+              -->
             </ul>
           </div>
         </div>

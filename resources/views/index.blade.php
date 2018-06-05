@@ -10,102 +10,75 @@
   <div class="container">
     <div class="slide-text">
       <h3>O que podemos fazer por você? <a href="" class="typewrite" data-period="2000" data-type='[ "Consultoria Empresarial", "Acessoria Juridica" ]'> <span class="wrap"></span> </a> </h3>
-      <h1>EXCELLENZA</h1>
-      <p>Consultoria Empresarial</p>
+      <h1>{{ session('config')->titulo }}</h1>
+      <p>{{ session('config')->mascara }}</p>
       <a href="#about" class="btn btn-default section-btn">Saiba mais</a> </div>
   </div>
 </div>
+@if(session('pagina_empresa'))
+    <!-- About section -->
+    <div class="parallax-section" id="about">
+      <div class="container">
 
-<!-- About section -->
-<div class="parallax-section" id="about">
-  <div class="container">
+        <!-- title start -->
+        <div class="section-title "><h3>{{ session('pagina_empresa')->pagina }}</h3></div>
 
-    <!-- title start -->
-    <div class="section-title "><h3>Bem vindo à <span>Excellenza</span></h3></div>
+          @if(session('empresa')->bloco1)
+              {!! session('empresa')->bloco1 !!}
+          @endif
 
-      <p>
-          A Excellenza Consultoria Empresarial nasceu da aliança fiel dos sócios José Mauro Cidral, José E. da C. Fontenelle Neto e Lucas R. G. Corrêa Cidral, que, ao vislumbrarem a necessidade de muitas empresas, de recorrerem ao Poder Judiciário para garantir a manutenção de suas atividades ou mesmo o seu encerramento, se depararam com uma carência no que tange a empresas atuantes na seara das crises empresariais.
-      </p>
-      <p>
-        Dessa forma, foi sob a união dos conhecimentos do Sr. José Cidral, que possui MBA em Direito Empresarial e Tributário e foi responsável pela privatização, estruturação e abertura de capital – por meio de seu IPO (ingresso no mercado de balcões) – da empresa ALL – América Latina Logística, com os conhecimentos do Sr. José Neto, que possui pós-graduação em Direito Penal e Criminologia, além de ser mestrando em Ciência Jurídica pela UNIVALI e em Direito da União Europeia pela UMINHO/Portugal e professor Universitário, e do Sr. Lucas Cidral, que possui MBA Executivo em Direito Empresarial e Tributário que desde a graduação atua diretamente na área falimentar e empresarial, que nasceu a Excellenza, uma empresa que prima, sobretudo, pela excelência no exercício de seu mister.
-        Assim, a empresa, que tem sede em Joinville, nasce com a ideia de buscar auxiliar o Poder Judiciário no seu mister de tutelar as relações jurídicas e os princípios da função social da empresa e da propriedade, por meio de nomeações para cargo de Administrador Judicial.
-      </p>
-      <br/>
-    <!-- title end -->
+          @if(session('empresa')->bloco2)
+              {!! session('empresa')->bloco2 !!}
+          @endif
 
-    <ul class="howlist">
-      <!--step 1-->
-      <li>
-        <div class="howbox">
-          <div class="iconcircle"><i class="fa fa-university" aria-hidden="true"></i></div>
-          <h4>MISSÃO</h4>
-          <p>Auxiliar o Poder Judiciário na prestação da tutela jurisdicional nos momentos de crises empresariais (Recuperação Judicial e Falência), com fim de viabilizar o cumprimento da função social das propriedades empresariais.</p>
-        </div>
-      </li>
-      <!--step 1 end-->
+          @if(session('empresa')->bloco3)
+              {!! session('empresa')->bloco3 !!}
+          @endif
 
-      <!--step 2-->
-      <li>
-        <div class="howbox">
-          <div class="iconcircle"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
-          <h4>VISÃO</h4>
-          <p>Ser um modelo de excelência no auxílio ao Poder Judiciário, na busca de soluções adequadas para situações de crises empresariais, por meio de aprimoramento constante.</p>
-        </div>
-      </li>
-      <!--step 2 end-->
-
-      <!--step 3-->
-      <li>
-        <div class="howbox">
-          <div class="iconcircle"><i class="fa fa-male" aria-hidden="true"></i></div>
-          <h4>VALORES</h4>
-          <p>Excelência; Aprimoramento Constante; Diligência; Confiança; Valorização Profissional.</p>
-        </div>
-      </li>
-      <!--step 3 end-->
-    </ul>
-  </div>
-  <div class="clearfix"></div>
-</div>
-
-<!-- Counter Section -->
-<div id="counter">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 col-sm-3 col-xs-12 counter-item">
-        <div class="counterbox">
-          <div class="counter-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
-          <span class="counter-number" data-from="1" data-to="999" data-speed="1000"></span> <span class="counter-text">Trusted Client</span> </div>
+          <!--
+          <ul class="howlist">
+            <li>
+              <div class="howbox">
+                <div class="iconcircle"><i class="fa fa-university" aria-hidden="true"></i></div>
+                <h4>MISSÃO</h4>
+                <p>Auxiliar o Poder Judiciário na prestação da tutela jurisdicional nos momentos de crises empresariais (Recuperação Judicial e Falência), com fim de viabilizar o cumprimento da função social das propriedades empresariais.</p>
+              </div>
+            </li>
+            <li>
+              <div class="howbox">
+                <div class="iconcircle"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
+                <h4>VISÃO</h4>
+                <p>Ser um modelo de excelência no auxílio ao Poder Judiciário, na busca de soluções adequadas para situações de crises empresariais, por meio de aprimoramento constante.</p>
+              </div>
+            </li>
+            <li>
+              <div class="howbox">
+                <div class="iconcircle"><i class="fa fa-male" aria-hidden="true"></i></div>
+                <h4>VALORES</h4>
+                <p>Excelência; Aprimoramento Constante; Diligência; Confiança; Valorização Profissional.</p>
+              </div>
+            </li>
+          </ul>
+          -->
       </div>
-      <div class="col-md-3 col-sm-3 col-xs-12 counter-item">
-        <div class="counterbox">
-          <div class="counter-icon"><i class="fa fa-university" aria-hidden="true"></i></div>
-          <span class="counter-number" data-from="1" data-to="1512" data-speed="2000"></span> <span class="counter-text">Success Cases</span> </div>
-      </div>
-      <div class="col-md-3 col-sm-3 col-xs-12 counter-item">
-        <div class="counterbox">
-          <div class="counter-icon"><i class="fa fa-laptop" aria-hidden="true"></i></div>
-          <span class="counter-number" data-from="1" data-to="1756" data-speed="3000"></span> <span class="counter-text">Case Study</span> </div>
-      </div>
-      <div class="col-md-3 col-sm-3 col-xs-12 counter-item">
-        <div class="counterbox">
-          <div class="counter-icon"><i class="fa fa-trophy" aria-hidden="true"></i></div>
-          <span class="counter-number" data-from="1" data-to="101" data-speed="4000"></span> <span class="counter-text">Awards</span> </div>
-      </div>
+      <div class="clearfix"></div>
     </div>
+@endif
+
+<!--
+<div class="servicesbox bg1">
+  <div class="container">
+
   </div>
 </div>
 
-<!-- Practice Areas section -->
 <div id="practicearea" class="parallax-section">
   <div class="container">
-    <!-- Section Title -->
     <div class="section-title">
       <h3>Areas de <span>Atuação</span></h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet, massa ac ornare feugiat, nunc dui auctor ipsum, sed posuere eros sapien id quam.</p>
     </div>
     <div class="row">
-      <!-- Service 1 -->
       <div class="col-md-4 col-sm-6">
         <div class="service-thumb">
           <div class="thumb-img"><img src="images/lawyer/1.jpg" class="animate" alt=""></div>
@@ -113,8 +86,6 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit pellentesque.</p>
         </div>
       </div>
-
-      <!-- Service 2 -->
       <div class="col-md-4 col-sm-6">
         <div class="service-thumb">
           <div class="thumb-img"><img src="images/lawyer/2.jpg" class="animate" alt=""></div>
@@ -122,8 +93,6 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit pellentesque.</p>
         </div>
       </div>
-
-      <!-- Service 3 -->
       <div class="col-md-4 col-sm-6">
         <div class="service-thumb">
           <div class="thumb-img"><img src="images/lawyer/3.jpg" class="animate" alt=""></div>
@@ -131,8 +100,6 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit pellentesque.</p>
         </div>
       </div>
-
-      <!-- Service 4 -->
       <div class="col-md-4 col-sm-6">
         <div class="service-thumb">
           <div class="thumb-img"><img src="images/lawyer/4.jpg" class="animate" alt=""></div>
@@ -140,8 +107,6 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit pellentesque.</p>
         </div>
       </div>
-
-      <!-- Service 5 -->
       <div class="col-md-4 col-sm-6">
         <div class="service-thumb">
           <div class="thumb-img"><img src="images/lawyer/5.jpg" class="animate" alt=""></div>
@@ -149,8 +114,6 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit pellentesque.</p>
         </div>
       </div>
-
-      <!-- Service 6 -->
       <div class="col-md-4 col-sm-6">
         <div class="service-thumb">
           <div class="thumb-img"><img src="images/lawyer/6.jpg" class="animate" alt=""></div>
@@ -161,16 +124,11 @@
     </div>
   </div>
 </div>
-
+-->
 <!-- Tagline -->
 <div class="servicesbox bg1">
   <div class="container">
-    <div class="section-title">
-      <h3>Personal Injury Lawyers</h3>
-    </div>
-    <div class="ctoggle">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt mauris est, in faucibus dui viverra et. Aliquam finibus vestibulum elit, at pharetra nisl congue vel. Nunc pretium posuere justo pretium fringilla. Sed volutpat risus non rhoncus convallis. Sed fermentum est at hendrerit pellentesque. Mauris nec leo euismod, sagittis mauris in, posuere est...</p>
-      <a href="#" class="readmore">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> </div>
+
   </div>
 </div>
 
@@ -180,65 +138,28 @@
 
     <!-- Dection Title -->
     <div class="section-title" >
-      <h3>Nossa <span>Equipe</span></h3>
-      <p>SÓCIOS FUNDADORES</p>
+      <h3>{{ session('pagina_clientes')->pagina }}</h3>
+      <p>SÓCIOS FUNDADORES E COLABORADORES</p>
     </div>
     <div class="row">
       <!-- team 1 -->
-      <div class="col-md-3 col-sm-6" >
-        <div class="team-thumb">
-          <div class="thumb-image"><img src="images/team/team-img1.jpg" class="animate" alt=""></div>
-          <h4>JOSE MAURO CIDRAL</h4>
-          <h5>Personal Lawyer</h5>
-          <ul class="list-inline social">
-            <li> <a href="javascript:void(0);" class="bg-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
-          </ul>
-        </div>
-      </div>
+      @foreach(session('equipes') as $equipe)
 
-      <!-- team 2 -->
-      <div class="col-md-3 col-sm-6" >
-        <div class="team-thumb">
-          <div class="thumb-image"><img src="images/team/team-img2.jpg" class="animate" alt=""></div>
-          <h4>JOSÉ EDILSON DA CUNHA FONTENELLE NETO</h4>
-          <h5>Criminal Lawyer</h5>
-          <ul class="list-inline social">
-            <li> <a href="javascript:void(0);" class="bg-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
-          </ul>
-        </div>
-      </div>
+          <div class="col-md-3 col-sm-6" >
+            <div class="team-thumb">
+              <div class="thumb-image"><img src="images/team/team-img1.jpg" class="animate" alt=""></div>
+              <h4>{{ $equipe->nome }}</h4>
+              <h5>{{ $equipe->cargo }}</h5>
+              <ul class="list-inline social">
+                @if($equipe->twiter)<li> <a href="javascript:void(0);" class="bg-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>@endif
+                @if($equipe->facebook)<li> <a href="javascript:void(0);" class="bg-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>@endif
+                @if($equipe->linkedin)<li> <a target="_blank" href="{{ $equipe->linkedin }}" class="bg-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>@endif
+              </ul>
+            </div>
+          </div>
 
-      <!-- team 3 -->
-      <div class="col-md-3 col-sm-6" >
-        <div class="team-thumb">
-          <div class="thumb-image"><img src="images/team/team-img3.jpg" class="animate" alt=""></div>
-          <h4>LUCAS RAFAEL GONÇALVES CORRÊA CIDRAL</h4>
-          <h5>Family Lawyer</h5>
-          <ul class="list-inline social">
-            <li> <a href="javascript:void(0);" class="bg-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
-          </ul>
-        </div>
-      </div>
+      @endforeach
 
-      <!-- team 4 -->
-      <div class="col-md-3 col-sm-6" >
-        <div class="team-thumb">
-          <div class="thumb-image"><img src="images/team/team-img4.jpg" class="animate" alt=""></div>
-          <h4>LUIS MÁRIO BAUMER</h4>
-          <h5>Employment Lawyer</h5>
-          <ul class="list-inline social">
-            <li> <a href="javascript:void(0);" class="bg-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -246,10 +167,9 @@
 <!-- Tagline Section -->
 <div class="taglinewrap">
   <div class="container">
-    <h2>Fale Conosco</h2>
+    <h2>FALE CONOSCO</h2>
     <h3>+55 (47) 3439-1259</h3>
-    <p>Sed sed neque laoreet, rhoncus libero id, pharetra est. Sed ut neque est. Maecenas et est sagittis, mollis risus dignissim, mattis dolor. </p>
-    <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Nos Ligue agora</a> </div>
+    <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Ligue Agora</a> </div>
 </div>
 
 <!-- Blog Section -->
@@ -258,61 +178,24 @@
     <!-- SECTION TITLE -->
     <div class="section-title" >
       <h3>Noticias do <span>Blog</span></h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>...</p>
     </div>
     <ul class="blogGrid">
+      @for ($i = 0; $i < 7; $i++)
       <li class="item">
         <div class="int">
           <!-- Blog Image -->
-          <div class="postimg"> <img src="images/blog/1.jpg" alt="Blog Title"></div>
+          <div class="postimg"> <img src="images/blog/1.jpg" alt="Titulo do Blog"></div>
           <!-- Blog info -->
           <div class="post-header">
-            <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> Sep 25, 2017</div>
-            <h4><a href="#.">Duis ultricies aliquet mauris</a></h4>
-            <div class="postmeta">By : <span>Jhon Doe </span> Category : <a href="#.">Job Search </a></div>
+            <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 04 Jun, 2018</div>
+            <h4><a href="#.">Post</a></h4>
+            <div class="postmeta">Por : <span>Administrador </span> Categoria : <a href="#.">Ofertas de Emprego </a></div>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu nulla eget nisl dapibus finibus maecenas quis sem ...</p>
-          <a href="#." class="readmore">Read More</a> </div>
+          <p>descricao do post ...</p>
+          <a href="#." class="readmore">Saber mais</a> </div>
       </li>
-      <li class="item">
-        <div class="int">
-          <!-- Blog Image -->
-          <div class="postimg"> <img src="images/blog/2.jpg" alt="Blog Title"></div>
-          <!-- Blog info -->
-          <div class="post-header">
-            <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> Sep 25, 2017</div>
-            <h4><a href="#.">Duis ultricies aliquet mauris</a></h4>
-            <div class="postmeta">By : <span>Jhon Doe </span> Category : <a href="#.">Job Search </a></div>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu nulla eget nisl dapibus finibus maecenas quis sem ...</p>
-          <a href="#." class="readmore">Read More</a> </div>
-      </li>
-      <li class="item">
-        <div class="int">
-          <!-- Blog Image -->
-          <div class="postimg"> <img src="images/blog/3.jpg" alt="Blog Title"></div>
-          <!-- Blog info -->
-          <div class="post-header">
-            <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> Sep 25, 2017</div>
-            <h4><a href="#.">Duis ultricies aliquet mauris</a></h4>
-            <div class="postmeta">By : <span>Jhon Doe </span> Category : <a href="#.">Job Search </a></div>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu nulla eget nisl dapibus finibus maecenas quis sem ...</p>
-          <a href="#." class="readmore">Read More</a> </div>
-      </li>
-      <li class="item">
-        <div class="int">
-          <!-- Blog Image -->
-          <div class="postimg"> <img src="images/blog/4.jpg" alt="Blog Title"></div>
-          <!-- Blog info -->
-          <div class="post-header">
-            <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> Sep 25, 2017</div>
-            <h4><a href="#.">Duis ultricies aliquet mauris</a></h4>
-            <div class="postmeta">By : <span>Jhon Doe </span> Category : <a href="#.">Job Search </a></div>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu nulla eget nisl dapibus finibus maecenas quis sem ...</p>
-          <a href="#." class="readmore">Read More</a> </div>
-      </li>
+      @endfor
     </ul>
   </div>
 </div>
@@ -330,24 +213,30 @@
     <div class="row">
       <div class="col-md-4">
         <div class="contact-now">
+          @if(session('config')->endereco)
           <div class="contact"> <span><i class="fa fa-home"></i></span>
             <div class="information"> <strong>Endereço:</strong>
-              <p>Rua dos Ginásticos, 126, sala 02, conj. 01 Centro - Joinville - SC</p>
+              <p>{{ session('config')->endereco }}</p>
             </div>
           </div>
+          @endif
+          @if(session('config')->email)
           <!-- Contact Info -->
           <div class="contact"> <span><i class="fa fa-envelope"></i></span>
             <div class="information"> <strong>Email:</strong>
-              <p>contato@excellenza.com.br</p>
+              <p>{{ session('config')->email }}</p>
             </div>
           </div>
+          @endif
+          @if(session('config')->telefone)
           <!-- Contact Info -->
           <div class="contact"> <span><i class="fa fa-phone"></i></span>
             <div class="information"> <strong>Telefone:</strong>
-              <p>+55 (47) 3439-1259</p>
+              <p>+55 {{ session('config')->telefone }}</p>
             </div>
           </div>
           <!-- Contact Info -->
+          @endif
         </div>
       </div>
       <div class="col-md-8">
@@ -355,19 +244,19 @@
         <div class="contact-form">
           <form id="contact-form" class="row">
             <div class="col-md-4 col-sm-6">
-              <input type="text" class="form-control" name="name" placeholder="Nome">
+              <input type="text" class="form-control" name="nomec" placeholder="Nome">
             </div>
             <div class="col-md-4 col-sm-6">
-              <input type="email" class="form-control" name="email" placeholder="Email">
+              <input type="email" class="form-control" name="emailc" placeholder="Email">
             </div>
             <div class="col-md-4 col-sm-12">
-              <input type="tel" class="form-control" name="phone" placeholder="Telefone">
+              <input type="tel" class="form-control" name="telefonec" placeholder="Telefone">
             </div>
             <div class="col-md-12 col-sm-12">
-              <input type="text" class="form-control" name="phone" placeholder="Endereço">
+              <input type="text" class="form-control" name="localc" placeholder="Endereço">
             </div>
             <div class="col-md-12 col-sm-12">
-              <textarea class="form-control" rows="5" name="message" placeholder="Mensagem"></textarea>
+              <textarea class="form-control" rows="5" name="mensagemc" placeholder="Mensagem"></textarea>
             </div>
             <div class="col-md-12">
               <button id="submit" type="submit" class="form-control" name="submit">Enviar Mensagem</button>
@@ -404,6 +293,8 @@
 @stop
 
 @section('js')
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMqMG_n4C0aAi3F8a82Q6s3hxDLrTXxe8&callback=initMap" async defer></script>
     <script src="js/gmap.js"></script>
+
 @stop
