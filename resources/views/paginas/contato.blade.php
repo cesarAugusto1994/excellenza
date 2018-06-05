@@ -60,7 +60,7 @@
       <div class="col-md-8">
         <!-- CONTACT FORM HERE -->
         <div class="contact-form">
-          <form id="contact-form" class="row">
+          <form id="contact-form" class="row" action="javascript:void(0);" method="post">
             <div class="col-md-4 col-sm-6">
               <input type="text" class="form-control" name="name" placeholder="Nome">
             </div>

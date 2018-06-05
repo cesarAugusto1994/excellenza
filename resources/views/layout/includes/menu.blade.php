@@ -7,7 +7,7 @@
       <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon icon-bar"></span> <span class="icon icon-bar"></span> <span class="icon icon-bar"></span> </button>
       <!-- lOGO TEXT HERE -->
       <!--<a href="index.html" class="navbar-brand"><img src="images/logo.png" class="whtlogo" alt="" /> <img src="images/logo-color.png" class="logocolor" alt=""></a> </div>-->
-        <a href="index.html" class="navbar-brand">EXCELLENZA</a>
+        <a href="{{ route('home') }}" class="navbar-brand">EXCELLENZA</a>
     </div>
 
     <!-- NAVIGATION LINKS -->

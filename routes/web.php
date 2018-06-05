@@ -11,26 +11,33 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::middleware('config')->group(function() {
+    Route::get('/', function () {
 
-Route::get('/sobre-nos', function () {
-    return view('paginas/empresa');
-})->name('sobre_nos');
+        $value = session('paginas');
 
-Route::get('/equipe', function () {
-    return view('paginas/equipe');
-})->name('equipe');
+        #dd($value);
 
-Route::get('/contato', function () {
-    return view('paginas/contato');
-})->name('contato');
+        return view('index');
+    })->name('home');
 
-Route::get('/envio-documentos', function () {
-    return view('paginas/envio-documentos');
-})->name('envio_documentos');
+    Route::get('/sobre-nos', function () {
+        return view('paginas/empresa');
+    })->name('sobre_nos');
 
-Route::get('/processos', function () {
-    return view('paginas/acompanhamento');
-})->name('processos');
+    Route::get('/equipe', function () {
+        return view('paginas/equipe');
+    })->name('equipe');
+
+    Route::get('/contato', function () {
+        return view('paginas/contato');
+    })->name('contato');
+
+    Route::get('/envio-documentos', function () {
+        return view('paginas/envio-documentos');
+    })->name('envio_documentos');
+
+    Route::get('/processos', function () {
+        return view('paginas/acompanhamento');
+    })->name('processos');
+});
