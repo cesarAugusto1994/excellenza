@@ -9,7 +9,7 @@
   <style type="text/css">
 
     #home2 {
-      background: url('{{ asset("excellenza/excellenza_4.jpeg") }}') no-repeat top;
+      background: url('{{ asset("excellenza/excellenza_06.png") }}') no-repeat top;
     }
 
   </style>
@@ -24,9 +24,10 @@
   <div class="container">
     <div class="slide-text">
       <h3>O que podemos fazer por você? <a href="" class="typewrite" data-period="2000" data-type='[ "Consultoria Empresarial", "Acessoria Juridica" ]'> <span class="wrap"></span> </a> </h3>
-      <h1>{{ session('config')->titulo }}</h1>
+      <!--<h1>{{ session('config')->titulo }}</h1>
       <p>{{ session('config')->mascara }}</p>
-      <a href="#about" class="btn btn-default section-btn">Saiba mais</a> </div>
+      <a href="#about" class="btn btn-default section-btn">Saiba mais</a>-->
+    </div>
   </div>
 </div>
 @if(session('pagina_empresa'))
@@ -188,10 +189,9 @@
     <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Ligue Agora</a> </div>
 </div>
 
-<!-- Blog Section -->
+<!--
 <div id="blog">
   <div class="container">
-    <!-- SECTION TITLE -->
     <div class="section-title" >
       <h3>Noticias do <span>Blog</span></h3>
       <p>...</p>
@@ -200,9 +200,7 @@
       @foreach(session('posts') as $post)
       <li class="item">
         <div class="int">
-          <!-- Blog Image -->
           <div class="postimg"> <img src="{{ asset('images/team/team-img1.jpg') }}" alt="Titulo do Blog"></div>
-          <!-- Blog info -->
           <div class="post-header">
             <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ $post->data->format('d M Y') }}</div>
             <h4><a href="{{ route('blog_detalhes', ['titulo' => str_slug($post->titulo), 'id' => $post->id]) }}">{{ $post->titulo }}</a></h4>
@@ -215,7 +213,7 @@
     </ul>
   </div>
 </div>
-
+-->
 <div id="map"></div>
 
 <div id="contact" class="parallax-section">
