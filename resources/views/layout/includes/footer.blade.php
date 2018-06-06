@@ -30,14 +30,9 @@
           <div class="footer-lwf footer-menu">
             <h3 class="footer-lwf-title">Posts Recentes</h3>
             <ul>
-              <!--
-              <li><a href="#">Practice Areas List</a></li>
-              <li><a href="#">Practice Areas Detail</a></li>
-              <li><a href="#">Attorney List</a></li>
-              <li><a href="#">Attorney Detail</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Testimonials</a></li>
-              -->
+              @foreach(session('posts') as $post)
+                  <li><a href="{{ route('blog_detalhes', ['titulo' => str_slug($post->titulo), 'id' => $post->id]) }}">{{ $post->titulo }}</a></li>
+              @endforeach
             </ul>
           </div>
         </div>

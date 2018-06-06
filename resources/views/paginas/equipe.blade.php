@@ -31,61 +31,24 @@
     <!-- Dection Title -->
 
     <div class="row">
-      <!-- team 1 -->
-      <div class="col-md-3 col-sm-6" >
-        <div class="team-thumb">
-          <div class="thumb-image"><img src="images/team/team-img1.jpg" class="animate" alt=""></div>
-          <h4>JOSE MAURO CIDRAL</h4>
-          <h5>Personal Lawyer</h5>
-          <ul class="list-inline social">
-            <li> <a href="javascript:void(0);" class="bg-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
-          </ul>
-        </div>
-      </div>
+      @foreach(session('equipes') as $equipe)
 
-      <!-- team 2 -->
-      <div class="col-md-3 col-sm-6" >
-        <div class="team-thumb">
-          <div class="thumb-image"><img src="images/team/team-img2.jpg" class="animate" alt=""></div>
-          <h4>JOSÉ EDILSON DA CUNHA FONTENELLE NETO</h4>
-          <h5>Criminal Lawyer</h5>
-          <ul class="list-inline social">
-            <li> <a href="javascript:void(0);" class="bg-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
-          </ul>
-        </div>
-      </div>
+          <div class="col-md-3 col-sm-6" >
+            <div class="team-thumb">
+              <a href="{{ route('equipe_detalhes', ['nome' => str_slug($equipe->nome), 'id' => $equipe->id]) }}">
+                <div class="thumb-image"><img src="{{ $equipe->imagem ?? 'images/team/team-img1.jpg' }}" class="animate" alt=""></div>
+                <h4>{{ $equipe->nome }}</h4>
+              </a>
+              <h5>{{ $equipe->cargo }}</h5>
+              <ul class="list-inline social">
+                @if($equipe->twiter)<li> <a href="javascript:void(0);" class="bg-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>@endif
+                @if($equipe->facebook)<li> <a href="javascript:void(0);" class="bg-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>@endif
+                @if($equipe->linkedin)<li> <a target="_blank" href="{{ $equipe->linkedin }}" class="bg-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>@endif
+              </ul>
+            </div>
+          </div>
 
-      <!-- team 3 -->
-      <div class="col-md-3 col-sm-6" >
-        <div class="team-thumb">
-          <div class="thumb-image"><img src="images/team/team-img3.jpg" class="animate" alt=""></div>
-          <h4>LUCAS RAFAEL GONÇALVES CORRÊA CIDRAL</h4>
-          <h5>Family Lawyer</h5>
-          <ul class="list-inline social">
-            <li> <a href="javascript:void(0);" class="bg-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- team 4 -->
-      <div class="col-md-3 col-sm-6" >
-        <div class="team-thumb">
-          <div class="thumb-image"><img src="images/team/team-img4.jpg" class="animate" alt=""></div>
-          <h4>LUIS MÁRIO BAUMER</h4>
-          <h5>Employment Lawyer</h5>
-          <ul class="list-inline social">
-            <li> <a href="javascript:void(0);" class="bg-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-            <li> <a href="javascript:void(0);" class="bg-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
-          </ul>
-        </div>
-      </div>
+      @endforeach
     </div>
   </div>
 </div>

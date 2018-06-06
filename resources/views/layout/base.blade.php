@@ -9,6 +9,7 @@
 <meta name="author" content="sharjeel anjum">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 @include('layout.includes.css')
+@yield('css')
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 

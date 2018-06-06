@@ -29,6 +29,11 @@ Route::middleware('config')->group(function() {
         return view('paginas/equipe');
     })->name('equipe');
 
+    Route::get('/equipe/{nome}/{id}', function ($titulo, $id) {
+        $equipe = \App\Models\Equipe::findOrFail($id);
+        return view('paginas/equipe-detalhes', compact('equipe'));
+    })->name('equipe_detalhes');
+
     Route::get('/contato', function () {
         return view('paginas/contato');
     })->name('contato');
@@ -60,6 +65,15 @@ Route::middleware('config')->group(function() {
         return view('paginas/blog', compact('posts'));
 
     })->name('blog');
+
+    Route::get('/blog/{titulo}/{id}', function ($titulo, $id) {
+
+        $post = \App\Models\Post::findOrFail($id);
+
+        return view('paginas/blog-detalhes', compact('post'));
+
+    })->name('blog_detalhes');
+
 
     Route::get('/faqs', function () {
 

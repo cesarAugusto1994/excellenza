@@ -36,17 +36,17 @@
             <li>
               <div class="row">
                 <div class="col-md-5">
-                  <div class="postimg"><img src="images/blog/1.jpg" alt="Blog Title">
+                  <div class="postimg"><img src="{{ asset('images/blog/1.jpg') }}" alt="Blog Title">
                     <div class="date"> {{ $post->data->format('d M') }}</div>
                   </div>
                 </div>
                 <div class="col-md-7">
                   <div class="post-header">
-                    <h4><a href="#.">{{ $post->titulo }}</a></h4>
-                    <div class="postmeta">Categoria : <a href="#.">{{ $post->categ->nome }} </a></div>
+                    <h4><a href="{{ route('blog_detalhes', ['titulo' => str_slug($post->titulo), 'id' => $post->id]) }}">{{ $post->titulo }}</a></h4>
+                    <div class="postmeta">Categoria : <a href="/blog?categoria={{ str_slug($post->categ->nome) }}&amp;categoriaId={{ $post->categ->id }}">{{ $post->categ->nome }} </a></div>
                   </div>
                   <p>{!! substr(strip_tags($post->desc1), 0, 120) !!}...</p>
-                  <a href="#." class="readmore">Saber mais</a> </div>
+                  <a href="{{ route('blog_detalhes', ['titulo' => str_slug($post->titulo), 'id' => $post->id]) }}" class="readmore">Saber mais</a> </div>
               </div>
             </li>
             @endforeach
@@ -82,7 +82,6 @@
               @endforeach
             </ul>
           </div>
-          <!-- Recent Posts -->
 
         </div>
       </div>

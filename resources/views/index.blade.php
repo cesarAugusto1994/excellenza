@@ -4,6 +4,20 @@
 
 @include('layout.includes.menu')
 
+@section('css')
+
+  <style type="text/css">
+
+    #home2 {
+      background: url('../excellenza/excellenza_4.jpeg') no-repeat top;
+    }
+
+  </style>
+
+@stop
+
+
+
 <!-- Home Section -->
 <div id="home2" class="parallax-section">
   <!--     <div class="overlay"></div>-->
@@ -147,7 +161,7 @@
 
           <div class="col-md-3 col-sm-6" >
             <div class="team-thumb">
-              <div class="thumb-image"><img src="images/team/team-img1.jpg" class="animate" alt=""></div>
+              <div class="thumb-image"><img src="{{ $equipe->imagem ?? 'images/team/team-img1.jpg' }}" class="animate" alt=""></div>
               <h4>{{ $equipe->nome }}</h4>
               <h5>{{ $equipe->cargo }}</h5>
               <ul class="list-inline social">
@@ -168,7 +182,7 @@
 <div class="taglinewrap">
   <div class="container">
     <h2>FALE CONOSCO</h2>
-    <h3>+55 (47) 3439-1259</h3>
+    <h3>+55 {{ session('config')->telefone }}</h3>
     <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Ligue Agora</a> </div>
 </div>
 
@@ -181,21 +195,21 @@
       <p>...</p>
     </div>
     <ul class="blogGrid">
-      @for ($i = 0; $i < 7; $i++)
+      @foreach(session('posts') as $post)
       <li class="item">
         <div class="int">
           <!-- Blog Image -->
           <div class="postimg"> <img src="images/blog/1.jpg" alt="Titulo do Blog"></div>
           <!-- Blog info -->
           <div class="post-header">
-            <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 04 Jun, 2018</div>
-            <h4><a href="#.">Post</a></h4>
-            <div class="postmeta">Por : <span>Administrador </span> Categoria : <a href="#.">Ofertas de Emprego </a></div>
+            <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ $post->data->format('d M Y') }}</div>
+            <h4><a href="{{ route('blog_detalhes', ['titulo' => str_slug($post->titulo), 'id' => $post->id]) }}">{{ $post->titulo }}</a></h4>
+            <div class="postmeta">Categoria : <a href="#.">{{ $post->categ->nome }} </a></div>
           </div>
-          <p>descricao do post ...</p>
+          <p>{!! substr(strip_tags($post->desc1), 0, 120) !!}...</p>
           <a href="#." class="readmore">Saber mais</a> </div>
       </li>
-      @endfor
+      @endforeach
     </ul>
   </div>
 </div>

@@ -61,6 +61,11 @@ class CheckCache
             $request->session()->put('categorias', $categorias);
         }
 
+        if (!$request->session()->has('posts')) {
+            $posts = \App\Models\Post::orderByDesc('id')->take(6)->get();
+            $request->session()->put('posts', $posts);
+        }
+
         if (!$request->session()->has('equipes')) {
             $equipes = Equipe::where('ativo', true)->get();
             $request->session()->put('equipes', $equipes);
