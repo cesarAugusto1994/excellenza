@@ -9,7 +9,7 @@
   <style type="text/css">
 
     #home2 {
-      background: url('../excellenza/excellenza_4.jpeg') no-repeat top;
+      background: url('{{ asset("excellenza/excellenza_4.jpeg") }}') no-repeat top;
     }
 
   </style>
@@ -161,8 +161,10 @@
 
           <div class="col-md-3 col-sm-6" >
             <div class="team-thumb">
-              <div class="thumb-image"><img src="{{ $equipe->imagem ?? 'images/team/team-img1.jpg' }}" class="animate" alt=""></div>
-              <h4>{{ $equipe->nome }}</h4>
+              <a href="{{ route('equipe_detalhes', ['nome' => str_slug($equipe->nome), 'id' => $equipe->id]) }}">
+                <div class="thumb-image"><img src="{{ asset($equipe->imagem ?? 'images/team/team-img1.jpg') }}" class="animate" alt=""></div>
+                <h4>{{ $equipe->nome }}</h4>
+              </a>
               <h5>{{ $equipe->cargo }}</h5>
               <ul class="list-inline social">
                 @if($equipe->twiter)<li> <a href="javascript:void(0);" class="bg-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>@endif
@@ -199,7 +201,7 @@
       <li class="item">
         <div class="int">
           <!-- Blog Image -->
-          <div class="postimg"> <img src="images/blog/1.jpg" alt="Titulo do Blog"></div>
+          <div class="postimg"> <img src="{{ asset('images/team/team-img1.jpg') }}" alt="Titulo do Blog"></div>
           <!-- Blog info -->
           <div class="post-header">
             <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ $post->data->format('d M Y') }}</div>
