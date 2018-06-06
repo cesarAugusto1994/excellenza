@@ -12,6 +12,10 @@
       background: url('{{ asset("excellenza/excellenza_06.png") }}') no-repeat top;
     }
 
+    .bg1 {
+      background: url('{{ asset("excellenza/excellenza_04.png") }}') no-repeat top;
+    }
+
   </style>
 
 @stop
