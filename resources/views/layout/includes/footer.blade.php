@@ -4,7 +4,7 @@
   <div class="footer-top-area">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="footer-lwf">
             <h3 class="footer-logo">EXCELLENZA</h3>
             <ul class="footer-contact">
@@ -14,7 +14,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="footer-lwf footer-menu">
             <h3 class="footer-lwf-title">Links</h3>
             <ul>
@@ -26,7 +26,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
+        <!--<div class="col-xs-12 col-sm-6 col-md-3">
           <div class="footer-lwf footer-menu">
             <h3 class="footer-lwf-title">Posts Recentes</h3>
             <ul>
@@ -36,7 +36,8 @@
             </ul>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
+        -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="footer-lwf">
             <h3 class="footer-lwf-title">Horario de Funcionamento</h3>
             <ul class="open-hours">

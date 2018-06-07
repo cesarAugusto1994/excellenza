@@ -15,3 +15,9 @@
 
 <!-- Main css -->
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+<style>
+  #map {
+    pointer-events: auto;
+  }
+</style>

@@ -33,7 +33,7 @@ class EnvioDocumentosController extends Controller
 
         flash('Dados enviados com sucesso!')->success()->important();
 
-        \Mail::to('cezzaar@gmail.com')->queue(new EnvioDocumentosMail($envio));
+        \Mail::to('adm.judicial@excellenza.com.br')->queue(new EnvioDocumentosMail($envio));
 
         return redirect()->back();
 

@@ -3,7 +3,11 @@ function initMap() {
 		var uluru = {lat: -25.363, lng: 131.044};
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -26.2981299, lng: -48.849055},
-          zoom: 13,
+          zoom: 15,
+					scrollwheel: false,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					heading: 90,
+    tilt: 45,
           styles: [
             {elementType: 'geometry', stylers: [{color: '#eeeeee'}]},
             {elementType: 'labels.text.stroke', stylers: [{color: '#000'}]},
@@ -87,8 +91,18 @@ function initMap() {
         });
 
 
-		var marker = new google.maps.Marker({
+				var marker = new google.maps.Marker({
           position: {lat: -26.2981299, lng: -48.849055},
           map: map
         });
+
+				var content = "Rua dos Ginásticos, 126, sala 02, conj. 01 Centro - Joinville - SC";
+
+				var infowindow = new google.maps.InfoWindow({
+					content: content
+				});
+
+				google.maps.event.addListener(marker, 'click', function(){
+					infowindow.open(map,marker);
+				});
       }

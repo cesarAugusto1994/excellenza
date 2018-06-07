@@ -169,14 +169,14 @@
       <!-- team 1 -->
       @foreach(session('equipes') as $equipe)
 
-          <div class="col-md-3 col-sm-6" >
+          <div class="col-md-4 col-sm-6" >
             <div class="team-thumb">
               <a href="{{ route('equipe_detalhes', ['nome' => str_slug($equipe->nome), 'id' => $equipe->id]) }}">
                 <div class="thumb-image"><img src="{{ asset($equipe->imagem ?? 'images/team/team-img1.jpg') }}" class="animate" alt=""></div>
                 <h4>{{ $equipe->nome }}</h4>
               </a>
               <h5>{{ $equipe->cargo }}</h5>
-              
+
             </div>
           </div>
 
@@ -242,7 +242,7 @@
           <!-- Contact Info -->
           <div class="contact"> <span><i class="fa fa-envelope"></i></span>
             <div class="information"> <strong>Email:</strong>
-              <p>adm@excellenza.com.br</p>
+              <p>adm.judicial@excellenza.com.br</p>
             </div>
           </div>
           @if(session('config')->telefone)
