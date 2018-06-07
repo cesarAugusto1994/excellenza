@@ -14,10 +14,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-sm-6">
-        <h1 class="page-heading">Envio de Documentos</h1>
+        <h1 class="page-heading">Remessa Digital</h1>
       </div>
       <div class="col-md-6 col-sm-6">
-        <div class="breadCrumb"><a href="/">Inicio</a> / <span>Envio de Documentos</span></div>
+        <div class="breadCrumb"><a href="/">Inicio</a> / <span>Remessa Digital</span></div>
       </div>
     </div>
   </div>
@@ -29,6 +29,9 @@
     <div class="about-desc">
       <div class="row">
         <div class="col-md-12">
+
+          @include('flash::message')
+
           <p>Neste campo é possível enviar a Habilitação de Crédito, a Divergência e os documentos necessários para habilitação na Assembleia Geral de Credores.
           A documentação pode ser anexada neste campo ou enviada por e-mail ao Administrador Judicial: adm.judicial@excellenza.com.br.
           Após o envio, a Excellenza fará a conferência dos documentos e será enviado um e-mail de confirmação com o número de protocolo, no prazo de até 48 (quarenta e oito) horas.
@@ -37,36 +40,46 @@
         <div class="col-md-8">
 
           <div class="contact-form">
-          <form id="contact-form" class="row">
+          <form id="contact-form" class="row" method="post" action="{{ route('envio_documentos_send') }}" enctype="multipart/form-data">
+            {{ csrf_field() }}
             <div class="col-md-6 col-sm-6">
-              <input type="text" class="form-control" name="name" placeholder="Nome Credor">
+              <input type="text" class="form-control" name="nome" value="{{ old('nome') }}" placeholder="Nome Credor" required>
             </div>
             <div class="col-md-6 col-sm-6">
-              <input type="email" class="form-control" name="email" placeholder="CPF/CNPJ Credor">
+              <input type="text" class="form-control" name="cpf" value="{{ old('cpf') }}" placeholder="CPF/CNPJ Credor" required>
             </div>
             <div class="col-md-6 col-sm-6">
-              <input type="text" class="form-control" name="name" placeholder="Nome Devedor">
+              <input type="text" class="form-control" name="nome_devedor" value="{{ old('nome_devedor') }}" placeholder="Nome Devedor" required>
             </div>
-            <div class="col-md-6 col-sm-6">
-              <input type="email" class="form-control" name="email" placeholder="CPF/CNPJ Devedor">
+            <div class="col-md-6 col-sm-6 has-error {{ $errors->has('cpf_devedor') ? ' has-error' : '' }}">
+              <input type="text" class="form-control" name="cpf_devedor" value="{{ old('cpf_devedor') }}" placeholder="CPF/CNPJ Devedor">
+              @if ($errors->has('cpf_devedor'))
+                <span class="help-block">
+                  <strong>{{ $errors->first('cpf_devedor') }}</strong>
+                </span>
+              @endif
             </div>
             <div class="col-md-4 col-sm-6">
-              <input type="email" class="form-control" name="email" placeholder="Nº Processo">
+              <input type="text" class="form-control" name="num_processo" value="{{ old('num_processo') }}" placeholder="Nº Processo" required>
             </div>
             <div class="col-md-4 col-sm-6">
-              <input type="email" class="form-control" name="email" placeholder="Email Credor">
+              <input type="email" class="form-control" name="email_credor" value="{{ old('email_credor') }}" placeholder="Email Credor">
             </div>
             <div class="col-md-4 col-sm-12">
-              <input type="tel" class="form-control" name="phone" placeholder="Telefone Credor">
+              <input type="tel" class="form-control" name="telefone_credor" value="{{ old('telefone_credor') }}" placeholder="Telefone Credor">
             </div>
             <div class="col-md-6 col-sm-12">
-              <input type="text" class="form-control" name="phone" placeholder="Tipo Arquivo">
+              <select class="form-control" name="tipo_arquivo" value="{{ old('tipo_arquivo') }}" placeholder="Tipo Arquivo" required>
+                  <option value="">Selecione uma opção</option>
+                  <option value="H">Habilitação</option>
+                  <option value="D">Divergência</option>
+              </select>
             </div>
             <div class="col-md-6 col-sm-12">
-              <input type="file" class="form-control" name="phone" placeholder="Arquivo">
+              <input type="file" class="form-control" name="arquivos" placeholder="Arquivo" required>
             </div>
             <div class="col-md-12 col-sm-12">
-              <textarea class="form-control" rows="5" name="message" placeholder="Mensagem"></textarea>
+              <textarea class="form-control" rows="5" name="mensagem" value="{{ old('mensagem') }}" placeholder="Mensagem"></textarea>
             </div>
             <div class="col-md-12">
               <button id="submit" type="submit" class="form-control" name="submit">Enviar Arquivo</button>
@@ -87,7 +100,7 @@
                 <p>Visa a inclusão de credor</p>
                 <br/>
                 <div class="text-center">
-                  <a href="http://www.excellenza.com.br/area/img/downloads/sem-foto.gif">VEJA AS INSTRUÇÕES AQUI</a>
+                  <a href="{{ url('/files/habilitacao_credito.pdf') }}">VEJA AS INSTRUÇÕES AQUI</a>
                 </div>
               </div>
             </li>
@@ -100,7 +113,7 @@
                 <h4>Divergência de Crédito</h4>
                 <p>Visa a alteração de valor, classificação ou titularidade de crédito</p>
                 <div class="text-center">
-                    <a href="http://www.excellenza.com.br/area/img/downloads/sem-foto.gif">VEJA AS INSTRUÇÕES AQUI</a>
+                    <a href="{{ url('/files/divergencia_credito.pdf') }}">VEJA AS INSTRUÇÕES AQUI</a>
                 </div>
               </div>
             </li>
@@ -113,7 +126,7 @@
                 <h4>Habilitação em Assembleia de Credores</h4>
                 <p>...</p>
                 <div class="text-center">
-                <a href="http://www.excellenza.com.br/area/img/downloads/sem-foto.gif">VEJA AS INSTRUÇÕES AQUI</a>
+                <a href="{{ url('/files/assembleia_credores.pdf') }}">VEJA AS INSTRUÇÕES AQUI</a>
                 </div>
               </div>
             </li>

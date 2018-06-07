@@ -34,13 +34,11 @@ Route::middleware('config')->group(function() {
         return view('paginas/equipe-detalhes', compact('equipe'));
     })->name('equipe_detalhes');
 
-    Route::get('/contato', function () {
-        return view('paginas/contato');
-    })->name('contato');
+    Route::get('/contato', 'ContatoController@index')->name('contato');
+    Route::post('/contato', 'ContatoController@store')->name('contato_store');
 
-    Route::get('/envio-documentos', function () {
-        return view('paginas/envio-documentos');
-    })->name('envio_documentos');
+    Route::get('/envio-documentos', 'EnvioDocumentosController@index')->name('envio_documentos');
+    Route::post('/envio-documentos', 'EnvioDocumentosController@send')->name('envio_documentos_send');
 
     Route::get('/processos', function () {
         return view('paginas/acompanhamento');

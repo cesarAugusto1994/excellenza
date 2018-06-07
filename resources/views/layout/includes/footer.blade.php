@@ -8,9 +8,9 @@
           <div class="footer-lwf">
             <h3 class="footer-logo">EXCELLENZA</h3>
             <ul class="footer-contact">
-              <li><i class="fa fa-phone"></i> +55 (47) 3439-1259</li>
-              <li><i class="fa fa-envelope"></i> info@companyname.com</li>
-              <li><i class="fa fa-map-marker"></i> Rua dos Ginásticos, 126, sala 02, conj. 01 - Centro - Joinville - SC</li>
+              <li><i class="fa fa-phone"></i> +55 {{ session('config')->telefone }}</li>
+              <li><i class="fa fa-envelope"></i> adm.judicial@excellenza.com.br</li>
+              <li><i class="fa fa-map-marker"></i>{{ session('config')->endereco }}</li>
             </ul>
           </div>
         </div>
@@ -21,7 +21,7 @@
               <li><a href="{{ route('home') }}">Inicio</a></li>
               <li><a href="{{ route('sobre_nos') }}">Conheça a Empresa</a></li>
               <li><a href="{{ route('equipe') }}">Equipe</a></li>
-              <li><a href="#">Blog</a></li>
+              <li><a href="{{ route('blog') }}">Blog</a></li>
               <li><a href="{{ route('contato') }}">Contato</a></li>
             </ul>
           </div>

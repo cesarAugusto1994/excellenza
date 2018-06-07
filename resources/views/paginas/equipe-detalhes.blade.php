@@ -30,6 +30,8 @@
         <div class="col-md-8 col-sm-8">
           <h2>{{ $equipe->nome }}</h2>
           <h3>{{ $equipe->cargo }}</h3>
+
+            {!! str_replace('-', '<br/> -', $equipe->descricao) !!}
           <!--
           <ul class="address">
             <li><i class="fa fa-phone"></i>+1 123 46578</li>
@@ -37,19 +39,17 @@
             <li><i class="fa fa-skype"></i>jhon.attorney</li>
             <li><i class="fa fa-globe"></i><a href="#">www.lawfirm.com</a></li>
           </ul>
-          -->
+
           <ul class="list-inline social">
             @if($equipe->twiter)<li> <a href="javascript:void(0);" class="bg-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>@endif
             @if($equipe->facebook)<li> <a href="javascript:void(0);" class="bg-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>@endif
             @if($equipe->linkedin)<li> <a target="_blank" href="{{ $equipe->linkedin }}" class="bg-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>@endif
           </ul>
+          -->
         </div>
       </div>
     </div>
-    <div class="attorneydetail">
-      <h1>Perfil Profissional</h1>
-      {!! $equipe->descricao !!}
-    </div>
+
     <!--
     <div class="attorneyContact">
       <h3>Contact Jhon</h3>

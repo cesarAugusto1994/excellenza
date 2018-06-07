@@ -40,11 +40,7 @@
                 <h4>{{ $equipe->nome }}</h4>
               </a>
               <h5>{{ $equipe->cargo }}</h5>
-              <ul class="list-inline social">
-                @if($equipe->twiter)<li> <a href="javascript:void(0);" class="bg-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>@endif
-                @if($equipe->facebook)<li> <a href="javascript:void(0);" class="bg-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>@endif
-                @if($equipe->linkedin)<li> <a target="_blank" href="{{ $equipe->linkedin }}" class="bg-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>@endif
-              </ul>
+              
             </div>
           </div>
 

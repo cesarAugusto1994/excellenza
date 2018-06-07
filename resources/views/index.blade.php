@@ -9,11 +9,15 @@
   <style type="text/css">
 
     #home2 {
-      background: url('{{ asset("excellenza/excellenza_06.png") }}') no-repeat top;
+      background: url('{{ asset("excellenza/excellenza_03.png") }}') no-repeat top;
     }
 
     .bg1 {
       background: url('{{ asset("excellenza/excellenza_04.png") }}') no-repeat top;
+    }
+
+    .custom-navbar .nav li a {
+      color: #ce3939
     }
 
   </style>
@@ -27,8 +31,9 @@
   <!--     <div class="overlay"></div>-->
   <div class="container">
     <div class="slide-text">
+      <!--
       <h3>O que podemos fazer por você? <a href="" class="typewrite" data-period="2000" data-type='[ "Consultoria Empresarial", "Acessoria Juridica" ]'> <span class="wrap"></span> </a> </h3>
-      <!--<h1>{{ session('config')->titulo }}</h1>
+      <h1>{{ session('config')->titulo }}</h1>
       <p>{{ session('config')->mascara }}</p>
       <a href="#about" class="btn btn-default section-btn">Saiba mais</a>-->
     </div>
@@ -171,11 +176,7 @@
                 <h4>{{ $equipe->nome }}</h4>
               </a>
               <h5>{{ $equipe->cargo }}</h5>
-              <ul class="list-inline social">
-                @if($equipe->twiter)<li> <a href="javascript:void(0);" class="bg-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>@endif
-                @if($equipe->facebook)<li> <a href="javascript:void(0);" class="bg-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>@endif
-                @if($equipe->linkedin)<li> <a target="_blank" href="{{ $equipe->linkedin }}" class="bg-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>@endif
-              </ul>
+              
             </div>
           </div>
 
@@ -238,14 +239,12 @@
             </div>
           </div>
           @endif
-          @if(session('config')->email)
           <!-- Contact Info -->
           <div class="contact"> <span><i class="fa fa-envelope"></i></span>
             <div class="information"> <strong>Email:</strong>
-              <p>{{ session('config')->email }}</p>
+              <p>adm@excellenza.com.br</p>
             </div>
           </div>
-          @endif
           @if(session('config')->telefone)
           <!-- Contact Info -->
           <div class="contact"> <span><i class="fa fa-phone"></i></span>
@@ -286,7 +285,7 @@
   </div>
 </div>
 
-<!-- Clients Logo-->
+<!-- Clients Logo
 <div class="our-clients">
   <div class="container">
     <div class="owl-clients">
@@ -304,7 +303,7 @@
     </div>
   </div>
 </div>
-<!-- Clients Logo end-->
+ Clients Logo end-->
 
 </div>
 
