@@ -29,6 +29,10 @@ Route::middleware('config')->group(function() {
         return view('paginas/equipe');
     })->name('equipe');
 
+    Route::get('/modelos', function () {
+        return view('paginas/modelos');
+    })->name('modelos');
+
     Route::get('/equipe/{nome}/{id}', function ($titulo, $id) {
         $equipe = \App\Models\Equipe::findOrFail($id);
         return view('paginas/equipe-detalhes', compact('equipe'));

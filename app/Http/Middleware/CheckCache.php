@@ -85,8 +85,10 @@ class CheckCache
             $config = $request->session()->get('config')->longitude;
             $request->session()->put('longitude', $config);
         }
-
+/*
         if(!$request->session()->has('coordenadas')) {
+
+            return false;
 
             $latitude = $request->session()->get('latitude');
             $longitude = $request->session()->get('longitude');
@@ -113,7 +115,7 @@ class CheckCache
   						}
             }
         }
-
+*/
         return $next($request);
     }
 }

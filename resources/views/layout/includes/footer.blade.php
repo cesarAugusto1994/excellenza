@@ -21,7 +21,7 @@
               <li><a href="{{ route('home') }}">Inicio</a></li>
               <li><a href="{{ route('sobre_nos') }}">Conheça a Empresa</a></li>
               <li><a href="{{ route('equipe') }}">Equipe</a></li>
-              <li><a href="{{ route('blog') }}">Blog</a></li>
+              <li><a href="{{ route('modelos') }}">Modelos e Instruções</a></li>
               <li><a href="{{ route('contato') }}">Contato</a></li>
             </ul>
           </div>

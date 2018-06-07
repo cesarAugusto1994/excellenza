@@ -21,3 +21,27 @@
     pointer-events: auto;
   }
 </style>
+
+<style type="text/css">
+
+  #home2 {
+    background: url('{{ asset("excellenza/excellenza_03.png") }}') no-repeat top;
+  }
+
+  .bg1 {
+    background: url('{{ asset("excellenza/excellenza_04.png") }}') no-repeat top;
+  }
+
+  .pageTitle {
+    background: url('{{ asset("excellenza/excellenza_04.png") }}') no-repeat top;
+  }
+
+  p {
+    color: black;
+  }
+
+  .custom-navbar .nav li a {
+    color: #ce3939
+  }
+
+</style>

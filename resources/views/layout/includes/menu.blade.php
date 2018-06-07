@@ -24,7 +24,7 @@
           <ul class="dropdown-menu">
             <li><a href="{{ route('envio_documentos') }}">Remessa Digital</a></li>
             <li><a href="{{ route('processos') }}">Acompanhamento Processual</a></li>
-            <li><a href="{{ route('blog') }}">Modelos e Instruções</a></li>
+            <li><a href="{{ route('modelos') }}">Modelos e Instruções</a></li>
             <li><a href="{{ route('faqs') }}">Perguntas e Respostas</a></li>
           </ul>
         </li>

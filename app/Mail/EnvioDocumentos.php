@@ -14,7 +14,7 @@ class EnvioDocumentos extends Mailable
 
     private $documento;
 
-    public $from = [['address' => 'adm.judicial@excellenza.com.br', 'name' => 'Excellenza']];
+    public $from = [['address' => 'adm@excellenza.com.br', 'name' => 'Excellenza']];
 
     /**
      * Create a new message instance.
