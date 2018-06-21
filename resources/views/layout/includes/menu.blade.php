@@ -13,7 +13,7 @@
     <!-- NAVIGATION LINKS -->
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="{{ route('home') }}">Inicio </a>
+        <li class="active"><a href="{{ route('home') }}">Início </a>
         </li>
         <li><a href="{{ route('sobre_nos') }}">Conheça a Empresa</a></li>
 
@@ -25,9 +25,11 @@
             <li><a href="{{ route('envio_documentos') }}">Remessa Digital</a></li>
             <li><a href="{{ route('processos') }}">Acompanhamento Processual</a></li>
             <li><a href="{{ route('modelos') }}">Modelos e Instruções</a></li>
-            <li><a href="{{ route('faqs') }}">Perguntas e Respostas</a></li>
+            <li><a href="{{ route('denuncia') }}">Denuncias</a></li>
           </ul>
         </li>
+
+        <li><a href="{{ route('faqs') }}">Perguntas e Respostas</a></li>
 
         <li><a href="{{ route('contato') }}">Contato</a></li>
         <li><span class="calltxt active"><i class="fa fa-phone" aria-hidden="true"></i> +55 (47) 3439-1259</span></li>

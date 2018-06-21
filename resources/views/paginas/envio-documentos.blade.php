@@ -96,10 +96,8 @@
             <li>
               <div class="howbox">
                 <div class="iconcircle"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
-                <h4>Habilitação de Crédito</h4>
-                <p>Visa a inclusão de credor</p>
-                <br/>
-                <div class="text-center">
+                <h4>INSTRUÇÕES PARA HABILITAÇÃO DE CRÉDITO ADMINISTRATIVA</h4>
+                <div class="">
                   <a href="{{ url('/files/habilitacao_credito.pdf') }}">VEJA AS INSTRUÇÕES AQUI</a>
                 </div>
               </div>
@@ -110,9 +108,8 @@
             <li>
               <div class="howbox">
                 <div class="iconcircle"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
-                <h4>Divergência de Crédito</h4>
-                <p>Visa a alteração de valor, classificação ou titularidade de crédito</p>
-                <div class="text-center">
+                <h4>INSTRUÇÕES PARA DIVERGÊNCIA DE CRÉDITO ADMINISTRATIVA</h4>
+                <div class="">
                     <a href="{{ url('/files/divergencia_credito.pdf') }}">VEJA AS INSTRUÇÕES AQUI</a>
                 </div>
               </div>
@@ -123,10 +120,9 @@
             <li>
               <div class="howbox">
                 <div class="iconcircle"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
-                <h4>Habilitação em Assembleia de Credores</h4>
-                <p>...</p>
-                <div class="text-center">
-                <a href="{{ url('/files/assembleia_credores.pdf') }}">VEJA AS INSTRUÇÕES AQUI</a>
+                <h4>INSTRUÇÕES PARA HABILITAÇÃO DE PROCURADORES NA ASSEMBLEIA DE GERAL CREDORES</h4>
+                <div class="">
+                <a href="{{ url('/files/assembleia_geral_credores.pdf') }}">VEJA AS INSTRUÇÕES AQUI</a>
                 </div>
               </div>
             </li>

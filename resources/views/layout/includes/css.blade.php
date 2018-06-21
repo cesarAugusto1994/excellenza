@@ -33,7 +33,7 @@
   }
 
   .pageTitle {
-    /*background: url('{{ asset("excellenza/excellenza_04.png") }}') no-repeat top;*/
+    background: url('{{ asset("excellenza/title_1.png") }}') no-repeat top;
   }
 
   p {

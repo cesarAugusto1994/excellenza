@@ -35,7 +35,7 @@
             <li>
               <div class="howbox">
                 <div class="iconcircle"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
-                <h4>Modelo Habilitação de Crédito</h4>
+                <h4>MODELO - HABILITAÇÃO DE CRÉDITO</h4>
                 <p><a target="_blank" href="{{ url('/files/modelo_habilitacao_credito.doc') }}">Clique para baixar</a></p>
               </div>
             </li>
@@ -45,7 +45,7 @@
             <li>
               <div class="howbox">
                 <div class="iconcircle"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
-                <h4>Modelo Divergência de Crédito</h4>
+                <h4>MODELO - DIVERGÊNCIA DE CRÉDITO</h4>
                 <p><a target="_blank" href="{{ url('/files/modelo_divergencia_credito.doc') }}">Clique para baixar</a></p>
               </div>
             </li>
@@ -55,11 +55,35 @@
             <li>
               <div class="howbox">
                 <div class="iconcircle"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
-                <h4>Habilitação de Procuradores</h4>
-                <p><a target="_blank" href="{{ url('/files/habilitacao_procuradores.pdf') }}">Clique para baixar</a></p>
+                <h4>ASSEMBLEIA GERAL DE CREDORES</h4>
+                <p><a target="_blank" href="{{ url('/files/assembleia_geral_credores.pdf') }}">Clique para baixar</a></p>
               </div>
             </li>
             <!--step 3 end-->
+
+            <li>
+              <div class="howbox">
+                <div class="iconcircle"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
+                <h4>INSTRUÇÕES PARA DIVERGÊNCIA DE CRÉDITO ADMINISTRATIVA</h4>
+                <p><a target="_blank" href="{{ url('/files/divergencia_credito_administrativa.pdf') }}">Clique para baixar</a></p>
+              </div>
+            </li>
+
+            <li>
+              <div class="howbox">
+                <div class="iconcircle"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
+                <h4>INSTRUÇÕES PARA HABILITAÇÃO DE CRÉDITO ADMINISTRATIVA</h4>
+                <p><a target="_blank" href="{{ url('/files/habilitacao_credito_administrativa.pdf') }}">Clique para baixar</a></p>
+              </div>
+            </li>
+
+            <li>
+              <div class="howbox">
+                <div class="iconcircle"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div>
+                <h4>INSTRUÇÕES PARA HABILITAÇÃO DE PROCURADORES</h4>
+                <p><a target="_blank" href="{{ url('/files/modelo_habilitacao_procuradores.pdf') }}">Clique para baixar</a></p>
+              </div>
+            </li>
           </ul>
 
         </div>

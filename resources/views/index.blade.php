@@ -164,14 +164,14 @@
   </div>
 </div>
 
-<!-- Tagline Section -->
+<!-- Tagline Section
 <div class="taglinewrap">
   <div class="container">
     <h2>FALE CONOSCO</h2>
     <h3>+55 {{ session('config')->telefone }}</h3>
     <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Ligue Agora</a> </div>
 </div>
-
+-->
 <!--
 <div id="blog">
   <div class="container">

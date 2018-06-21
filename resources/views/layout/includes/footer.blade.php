@@ -18,7 +18,7 @@
           <div class="footer-lwf footer-menu">
             <h3 class="footer-lwf-title">Links</h3>
             <ul>
-              <li><a href="{{ route('home') }}">Inicio</a></li>
+              <li><a href="{{ route('home') }}">Início</a></li>
               <li><a href="{{ route('sobre_nos') }}">Conheça a Empresa</a></li>
               <li><a href="{{ route('equipe') }}">Equipe</a></li>
               <li><a href="{{ route('modelos') }}">Modelos e Instruções</a></li>
@@ -39,17 +39,17 @@
         -->
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="footer-lwf">
-            <h3 class="footer-lwf-title">Horario de Funcionamento</h3>
+            <h3 class="footer-lwf-title">Horário de Funcionamento</h3>
             <ul class="open-hours">
-              <li><span>Segunda à sexta-feira:</span> <span class="text-right"> das 8h às 18h.</span></li>
-              <li><span>Sabado e Domingo:</span> <span class="text-right">Fechado</span></li>
+              <li><span>Segunda à Sexta:</span> <span class="text-right"> das 9h às 18h.</span></li>
+              <li><span>Sábado e Domingo:</span> <span class="text-right">Fechado</span></li>
             </ul>
-            <div class="newsletter">
+            <!--<div class="newsletter">
               <form>
                 <input type="text" placeholder="Informe o seu email" value="" class="news-input">
                 <button type="submit" value="" class="news-btn"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
               </form>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-md-6">Copyright &copy; 2018 <span>Excellenza Acessoria Empresarial</span>. Direitos Reservados.</div>
-        <div class="col-md-12 col-md-6 text-right">Desenvolvido Por: <a href="#" target="_blank">César augusto</a></div>
+        <div class="col-md-12 col-md-6 text-right">Desenvolvido para: <a href="http://nilux.com.br/" target="_blank">Nilux Tecnologia</a></div>
       </div>
     </div>
   </div>

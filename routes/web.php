@@ -12,12 +12,9 @@
 */
 
 Route::middleware('config')->group(function() {
+
     Route::get('/', function () {
-
-        $value = session('config');
-
-      #dd();
-
+    $value = session('config');
         return view('index');
     })->name('home');
 
@@ -43,6 +40,9 @@ Route::middleware('config')->group(function() {
 
     Route::get('/envio-documentos', 'EnvioDocumentosController@index')->name('envio_documentos');
     Route::post('/envio-documentos', 'EnvioDocumentosController@send')->name('envio_documentos_send');
+
+    Route::get('/denuncia', 'DenunciaController@index')->name('denuncia');
+    Route::post('/denuncia', 'DenunciaController@store')->name('denuncia_store');
 
     Route::get('/processos', function () {
         return view('paginas/acompanhamento');
@@ -75,7 +75,6 @@ Route::middleware('config')->group(function() {
         return view('paginas/blog-detalhes', compact('post'));
 
     })->name('blog_detalhes');
-
 
     Route::get('/faqs', function () {
 
