@@ -57,10 +57,9 @@ class DenunciaController extends Controller
 
         flash('Dados enviados com sucesso!')->success()->important();
 
-        $teste = "cezzaar@gmail.com";
         $prod = "adm.judicial@excellenza.com.br";
 
-        @\Mail::to($teste)->queue(new DenunciaMail($denuncia));
+        @\Mail::to($prod)->queue(new DenunciaMail($denuncia));
 
         return redirect()->back();
     }

@@ -8,6 +8,7 @@
  */
 
 define('LARAVEL_START', microtime(true));
+ini_set('display_errors', E_ALL);
 
 /*
 |--------------------------------------------------------------------------

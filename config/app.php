@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pt-br',
 
     /*
     |--------------------------------------------------------------------------
@@ -105,6 +105,7 @@ return [
     */
 
     'key' => env('APP_KEY'),
+    #'key' => env('base64:31wDiTk/B6c58ly5a8hf3xL+pawJdBhIQMO8moFJtEs='),
 
     'cipher' => 'AES-256-CBC',
 
