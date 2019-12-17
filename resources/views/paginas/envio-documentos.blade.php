@@ -17,7 +17,7 @@
         <h1 class="page-heading">Remessa Digital</h1>
       </div>
       <div class="col-md-6 col-sm-6">
-        <div class="breadCrumb"><a href="/">Inicio</a> / <span>Remessa Digital</span></div>
+        <div class="breadCrumb"><a href="/">Início</a> / <span>Remessa Digital</span></div>
       </div>
     </div>
   </div>

@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'pt-br',
+    'locale' => 'pt_br',
 
     /*
     |--------------------------------------------------------------------------
@@ -177,6 +177,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        crocodicstudio\crudbooster\CRUDBoosterServiceProvider::class,
 
     ],
 

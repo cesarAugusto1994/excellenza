@@ -16,7 +16,7 @@
         <h1 class="page-heading">{{ $post->titulo }}</h1>
       </div>
       <div class="col-md-6 col-sm-6">
-        <div class="breadCrumb"><a href="/">Inicio</a> / <span>Modelos e Instruções</span></div>
+        <div class="breadCrumb"><a href="/">Início</a> / <span>Modelos e Instruções</span></div>
       </div>
     </div>
   </div>

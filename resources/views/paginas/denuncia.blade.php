@@ -14,10 +14,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-sm-6">
-        <h1 class="page-heading">Denuncia</h1>
+        <h1 class="page-heading">Denúncias</h1>
       </div>
       <div class="col-md-6 col-sm-6">
-        <div class="breadCrumb"><a href="/">Inicio</a> / <span>Denuncia</span></div>
+        <div class="breadCrumb"><a href="/">Início</a> / <span>Denúncia</span></div>
       </div>
     </div>
   </div>

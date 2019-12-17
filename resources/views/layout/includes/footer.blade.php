@@ -9,6 +9,8 @@
             <h3 class="footer-logo">EXCELLENZA</h3>
             <ul class="footer-contact">
               <li><i class="fa fa-phone"></i> +55 {{ session('config')->telefone }}</li>
+              <li><i class="fa fa-phone"></i> +55 (47) 9 9228-0772</li>
+              <li><i class="fa fa-facebook"></i> <a href="https://www.facebook.com/ExcellenzaConsultoriaEmpresarial">Excellenza Consultoria Empresarial</a></li>
               <li><i class="fa fa-envelope"></i> adm.judicial@excellenza.com.br</li>
               <li><i class="fa fa-map-marker"></i>{{ session('config')->endereco }}</li>
             </ul>

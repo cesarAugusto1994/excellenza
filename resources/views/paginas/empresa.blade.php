@@ -17,7 +17,7 @@
         <h1 class="page-heading">Conheça a Empresa</h1>
       </div>
       <div class="col-md-6 col-sm-6">
-        <div class="breadCrumb"><a href="/">Inicio</a> / <span>Conheça a Empresa</span></div>
+        <div class="breadCrumb"><a href="/">Início</a> / <span>Conheça a Empresa</span></div>
       </div>
     </div>
   </div>

@@ -227,6 +227,7 @@
           <div class="contact"> <span><i class="fa fa-phone"></i></span>
             <div class="information"> <strong>Telefone:</strong>
               <p>+55 {{ session('config')->telefone }}</p>
+              <p>+55 (47) 9 9228-0772</p>
             </div>
           </div>
           <!-- Contact Info -->

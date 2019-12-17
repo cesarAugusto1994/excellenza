@@ -16,7 +16,7 @@
         <h1 class="page-heading">{{ $equipe->nome }}</h1>
       </div>
       <div class="col-md-6 col-sm-6">
-        <div class="breadCrumb"><a href="/">Inicio</a> / <a href="{{ route('equipe') }}">Equipe</a></div>
+        <div class="breadCrumb"><a href="/">Início</a> / <a href="{{ route('equipe') }}">Equipe</a></div>
       </div>
     </div>
   </div>

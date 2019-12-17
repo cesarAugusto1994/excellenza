@@ -17,7 +17,7 @@
         <h1 class="page-heading">Perguntas e Respostas</h1>
       </div>
       <div class="col-md-6 col-sm-6">
-        <div class="breadCrumb"><a href="/">Inicio</a> / <span>Perguntas e Respostas</span></div>
+        <div class="breadCrumb"><a href="/">Início</a> / <span>Perguntas e Respostas</span></div>
       </div>
     </div>
   </div>
